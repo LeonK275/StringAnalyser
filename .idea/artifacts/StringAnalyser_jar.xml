@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="StringAnalyser:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/StringAnalyser_jar</output-path>
+    <root id="archive" name="StringAnalyser.jar">
+      <element id="module-output" name="StringAnalyser" />
+    </root>
+  </artifact>
+</component>
