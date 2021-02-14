@@ -68,7 +68,6 @@ public class Main{
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
-
         textField.setWrapStyleWord(true);
         textField.setLineWrap(true);
         textAreaParam.setWrapStyleWord(true);
@@ -93,7 +92,6 @@ public class Main{
 
         RBlightmode.setOpaque(false);
         opaq(false);
-
 
         // LAYOUT
         buttonAnalyse.setBounds(10,10,130,50);
@@ -148,7 +146,6 @@ public class Main{
         panel.add(RBlightmode);
         panel.add(RBdarkmode);
 
-        //Progress Bar einfügen!!!!!  https://stackoverflow.com/questions/8916064/how-to-add-a-progress-bar
         //BUTTON GROUP RADIO BUTTONS
         buttonGroup.add(RBlengh);
         buttonGroup.add(RBtoUpperCase);
@@ -274,7 +271,6 @@ public class Main{
                     String qm = label.getText();
                     label.setText("\"" + qm + "\"");
                 }
-
             }
         };
 
@@ -319,7 +315,6 @@ public class Main{
     private static String letterTypeCount(char[] characters) {
 
         Boolean emptyy = true;
-
         String s = "";
 
         for(int i = 0; i < characters.length; i++) {
@@ -327,9 +322,7 @@ public class Main{
             for(int f = 0; f < alphabet.length; f++) {
                 if(alphabet[f] == characters[i]) {
                     alphabetInt[f]++;
-
                 }
-
             }
         }
 
@@ -342,9 +335,6 @@ public class Main{
                 continue;
             }
             alphabetInt[f] = 0;
-
-
-
         }
 
         if(emptyy) {
@@ -357,7 +347,6 @@ public class Main{
     private static String digitsTypeCount(char[] numbers) {
 
         Boolean emptyy = true;
-
         String s = "";
 
         for(int i = 0; i < numbers.length; i++) {
@@ -365,7 +354,6 @@ public class Main{
             for(int f = 0; f < digits.length; f++) {
                 if(digits[f] == numbers[i]) {
                     digitsInt[f]++;
-
                 }
             }
         }
@@ -373,9 +361,11 @@ public class Main{
         for(int f = 0; f < digitsInt.length; f++) {
 
             if(digitsInt[f] > 0) {
+
                 s = s + (digits[f] + ": " + digitsInt[f] + "\n");
                 digitsInt[f] = 0;
                 emptyy = false;
+
             }
             else {
                 continue;
@@ -401,7 +391,6 @@ public class Main{
             else {
                 bytewert[i] = (byte) (bytewert[i] + 127);
             }
-
         }
 
         return new String(bytewert, StandardCharsets.UTF_16);
@@ -480,8 +469,6 @@ public class Main{
         RBlightmode.setForeground(fontColor);
         RBdarkmode.setForeground(fontColor);
 
-
-
     }
 
     public static void opaq(Boolean f) {
@@ -503,6 +490,5 @@ public class Main{
         RBdarkmode.setOpaque(f);
 
     }
-
 
 }
